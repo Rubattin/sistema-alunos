@@ -1,0 +1,7 @@
+<h2>Cadastro de Alunos</h2>
+<input [(ngModel)]="nome" placeholder="Digite o nome do aluno" />
+<button (click)="salvar()">Salvar</button>
+<ul *ngIf="listas.length > 0; else vazio">
+  <li *ngFor="let aluno of listas">{{ aluno }}</li>
+</ul>
+<ng-template #vazio><p>Nenhum aluno cadastrado</p></ng-template>
